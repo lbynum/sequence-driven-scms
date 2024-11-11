@@ -1,0 +1,282 @@
+{
+    "experiment_name": "breast_cancer_example",
+    "setup_sequence_sample_space" : [
+        {
+            "possible_prefix_suffix_pairs": [
+                ["A ", "-year-old female arrives at the oncology clinic with a new diagnosis of invasive breast cancer."],
+                ["A ", "-year-old woman presents to the oncology clinic with a recent diagnosis of invasive breast carcinoma."],
+                ["A ", "-year-old woman comes to the oncology department with a recent diagnosis of invasive breast carcinoma."],
+                ["A ", "-year-old patient is seen at the oncology clinic following a recent diagnosis of invasive breast carcinoma."],
+                ["An oncology clinic visit is scheduled for a ", "-year-old woman who has recently been diagnosed with invasive breast cancer."],
+                ["A ", "-year-old woman is referred to the oncology clinic due to a recent diagnosis of invasive breast carcinoma."],
+                ["A ", "-year-old female patient has recently been diagnosed with invasive breast cancer and is now presenting to the oncology clinic."],
+                ["At the oncology clinic, a ", "-year-old woman is evaluated following a recent diagnosis of invasive breast carcinoma."],
+                ["A ", "-year-old woman seeks consultation at the oncology clinic after being recently diagnosed with invasive breast cancer."],
+                ["A ", "-year-old woman has been diagnosed with invasive breast carcinoma and presents to the oncology clinic for further evaluation."],
+                ["A ", "-year-old woman, recently diagnosed with invasive breast carcinoma, presents for assessment at the oncology clinic."]
+
+            ],
+            "candidate_set": [
+                "25", "35", "45", "55", "65", "75", "85"
+            ],
+            "intervention_choice": null,
+            "parent_indices": null,
+            "exogenous": true,
+            "variable_name": "age"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["Her medical history includes ", "."],
+                ["Her medical background includes a diagnosis of ", "."],
+                ["She has a history of ", " in her medical records"],
+                ["", " is part of her medical history."],
+                ["Among her medical conditions, ", " is noted."],
+                ["Her health history reveals that she has ", "."],
+                ["She has been diagnosed with ", " in the past."],
+                ["Her prior medical history includes ", "."],
+                ["", " is listed in her medical history."],
+                ["She has a past medical history of ", "."],
+                ["A history of ", " is documented in her medical records."]
+            ],
+            "candidate_set": ["hypertension", "type 2 diabetes mellitus", "hyperlipidemia", "osteoporosis"],
+            "intervention_choice": null,
+            "parent_indices": [0],
+            "exogenous": true,
+            "variable_name": "medical conditions"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["This has been managed with ", "."],
+                ["She treates this condition with ", "."],
+                ["She is on ", " to handle this condition."],
+                ["She is on ", " to manage it."],
+                ["Her condition is managed through ", " therapy."],
+                ["She relies on ", " to manage here condition."],
+                ["Her condition is regulated by taking ", "."],
+                ["", " is prescribed to manage her condition."],
+                ["This condition is controlled with the help of ", "."],
+                ["Her condition is treated with ", "."]
+            ],
+            "candidate_set": ["lisinopril", "metformin", "atorvastatin", "calcium carbonate"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1],
+            "exogenous": true,
+            "variable_name": "medication"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["She is a ", "  woman who has had no previous breast surgeries or hormone replacement therapy. The patient underwent a comprehensive evaluation, including imaging and biopsy. The biopsy sample was analyzed, and the results reveal the following."],
+                ["As a ", " woman who has never undergone breast surgery or hormone replacement therapy, she had a thorough evaluation that included imaging and a biopsy. The biopsy results, once analyzed, showed the following."],
+                ["This ", " woman has no prior history of breast surgeries or hormone replacement therapy. Following a detailed assessment with imaging and biopsy, the results from the biopsy were analyzed and disclosed the following."],
+                ["This ", " woman without a history of breast surgeries or hormone replacement therapy underwent a full evaluation, including imaging and biopsy. The biopsy results were analyzed and revealed the following findings."],
+                ["She is a ", " woman who has not had any previous breast surgeries or undergone hormone replacement therapy. After a comprehensive assessment involving imaging and biopsy, the analysis of the biopsy sample yielded the following results."],
+                ["The patient, a ", " woman with no previous breast surgeries or hormone replacement therapy, received a thorough evaluation that included imaging and biopsy. The analyzed biopsy sample provided the following results."],
+                ["As a ", " woman who has not experienced breast surgeries or hormone replacement therapy, she went through an extensive evaluation, including imaging and biopsy. The biopsy results, after analysis, revealed the following."],
+                ["She is a ", " woman with no history of breast surgeries or hormone replacement therapy underwent a detailed evaluation, including imaging and biopsy. The results from analyzing the biopsy sample indicated the following."],
+                ["The patient, being a ", " woman with no prior breast surgeries or hormone replacement therapy, underwent a comprehensive evaluation consisting of imaging and biopsy. The subsequent analysis of the biopsy results revealed the following."],
+                ["She is a ", " woman who has not had any breast surgeries or hormone replacement therapy in the past. Following a thorough evaluation with imaging and biopsy, the biopsy sample was analyzed, leading to the following results."]
+            ],
+            "candidate_set": ["pre-menopausal", "post-menopausal"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2],
+            "exogenous": true,
+            "variable_name": "menopausal status"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["The tumor is classified as ", "."],
+                ["The tumor is categorized as ", "."],
+                ["The tumor is classified under ", "."],
+                ["The tumor is identified as ", "."],
+                ["The tumor is designated as ", "."],
+                ["According to the classification, the tumor is ", "."],
+                ["The tumor falls into the ", " category."],
+                ["The pathology report indicates the tumor is ", "."],
+                ["It has been determined that the tumor is ", "."],
+                ["The tumor is assessed to be ", "."]
+            ],
+            "candidate_set": ["invasive ductal carcinoma (IDC)", "invasive lobular carcinoma", "medullary carcinoma", "tubular carcinoma"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3],
+            "exogenous": false,
+            "variable_name": "carcinoma"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["It has a histology of ", "."],
+                ["Its histology is characterized as ", "."],
+                ["The histological grading of the tumor is ", "."],
+                ["The tumor has a ", " histological classification."],
+                ["It shows a ", " histological pattern."],
+                ["The histological assessment reveals a ", " classification."],
+                ["The tumor's histology is rated as ", "."],
+                ["The histology of the specimen is ", "."],
+                ["It is described histologically as ", "."],
+                ["It exhibits a histology characterized as ", "."]
+            ],
+            "candidate_set": ["grade 1", "grade 2", "grade 3"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4],
+            "exogenous": false,
+            "variable_name": "histology grade"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["The tumor harbors a high mutation burden, with specific mutations identified in the ", " gene"],
+                ["The tumor contains a high mutation burden, with particular mutations found in the ", " gene"],
+                ["A significant mutation burden is present in the tumor, including specific mutations in the ", " gene"],
+                ["The tumor exhibits a substantial mutation burden, with identified mutations in the ", " gene"],
+                ["High levels of mutations are observed in the tumor, particularly involving the ", " gene"],
+                ["There is a notable mutation burden in the tumor, including distinct mutations in the ", " gene"],
+                ["The tumor shows an elevated mutation burden, with particular mutations detected in the ", " gene"],
+                ["A considerable mutation burden is evident in the tumor, with specific mutations associated with the ", " gene"],
+                ["The tumor presents a high mutation burden, with specific alterations identified in the ", " gene"],
+                ["The tumor demonstrates a significant mutation load, with mutations specifically found in the ", " gene"]
+            ],
+            "candidate_set": ["TP53", "PIK3CA", "BRCA1", "BRCA2"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5],
+            "exogenous": false,
+            "variable_name": "mutation 1"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["and also the ", " gene."],
+                ["as well as the ", " gene."],
+                ["in addition to the ", " gene."],
+                ["and the ", " gene."],
+                ["along with the ", " gene."],
+                ["together with the ", " gene."],
+                ["plus the ", " gene."],
+                ["coupled with the ", " gene."],
+                ["alongside the ", " gene."],
+                ["with the ", " gene."]
+            ],
+            "candidate_set": ["TP53", "PIK3CA", "BRCA1", "BRCA2"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6],
+            "exogenous": false,
+            "variable_name": "mutation 2"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["Immunohistochemistry shows strong positive staining for estrogen receptor (ER) and progesterone receptor (PR), indicating ", " expression."],
+                ["Immunohistochemistry reveals strong positive staining for estrogen receptor (ER) and progesterone receptor (PR), suggesting ", " expression."],
+                ["The immunohistochemistry results display robust positive staining for estrogen receptor (ER) and progesterone receptor (PR), indicating ", " levels of expression."],
+                ["Strong positive staining for estrogen receptor (ER) and progesterone receptor (PR) observed in immunohistochemistry points to ", " expression."],
+                ["Immunohistochemistry shows pronounced positive staining for estrogen receptor (ER) and progesterone receptor (PR), reflecting ", " expression."],
+                ["The results of immunohistochemistry demonstrate significant positive staining for estrogen receptor (ER) and progesterone receptor (PR), with ", " expression."],
+                ["Immunohistochemistry exhibits marked positive staining for estrogen receptor (ER) and progesterone receptor (PR), corresponding to "," expression."],
+                ["Strong positive staining for both estrogen receptor (ER) and progesterone receptor (PR) in immunohistochemistry is indicative of ", " expression."],
+                ["Immunohistochemistry findings show pronounced positive staining for estrogen receptor (ER) and progesterone receptor (PR), suggesting a ", " level of expression."],
+                ["The immunohistochemical analysis shows intense positive staining for estrogen receptor (ER) and progesterone receptor (PR), signifying ", " expression."],
+                ["With strong positive staining for estrogen receptor (ER) and progesterone receptor (PR), the immunohistochemistry results point to ", " expression."]
+            ],
+            "candidate_set": ["low", "moderate", "high"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7],
+            "exogenous": false,
+            "variable_name": "hormone level"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["The tumor has a genomic instability score that is ", "."],
+                ["The tumor exhibits a genomic instability score of ", " level."],
+                ["The genomic instability score of the tumor is classified as ", "."],
+                ["The tumor's genomic instability score is assessed as ", "."],
+                ["A ", " genomic instability score is observed in the tumor."],
+                ["The tumor shows a ", " level of genomic instability according to its score."],
+                ["The genomic instability score for this tumor falls into the ", " range."],
+                ["The tumor has been assigned a ", " rating for genomic instability."],
+                ["The tumor's score for genomic instability is considered ", "."],
+                ["The level of genomic instability in the tumor is described as ", "."],
+                ["The tumor demonstrates a ", " genomic instability score."]
+            ],
+            "candidate_set": ["low", "high"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+            "exogenous": false,
+            "variable_name": "genomic instability"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["This indicates a ", " level of chromosomal aberrations."],
+                ["This implies that chromosomal aberrations are ", "."],
+                ["This points to the presence of ", " chromosomal aberrations."],
+                ["This suggests that there are ", " chromosomal irregularities."],
+                ["This reveals ", " chromosomal deviations."],
+                ["This suggests the occurrence of chromosomal aberrations at a ", " level."],
+                ["This indicates that the chromosomal aberrations are ", " in extent."],
+                ["This implies a ", " degree of chromosomal abnormalities."],
+                ["This denotes a ", " amount of chromosomal aberrations."],
+                ["This suggests the presence of chromosomal aberrations of ", " severity."]
+            ],
+            "candidate_set": ["significant", "minor"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+            "exogenous": false,
+            "variable_name": "chromosomal aberration"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["Immunohistochemistry for HER2 is ", " and fluorescence in situ hybridization (FISH) confirms no HER2 amplification."],
+                ["HER2 testing by immunohistochemistry shows ", " while FISH confirms no HER2 amplification."],
+                ["The immunohistochemistry result for HER2 is ", " with no HER2 amplification confirmed by FISH."],
+                ["Immunohistochemistry indicates HER2 as ", " and FISH verifies the absence of HER2 amplification."],
+                ["HER2 is identified as ", " in immunohistochemistry, and FISH confirms no HER2 amplification."],
+                ["The result for HER2 in immunohistochemistry is ", " with fluorescence in situ hybridization (FISH) confirming no amplification."],
+                ["HER2 status from immunohistochemistry is ", " and FISH analysis shows no HER2 amplification."],
+                ["Immunohistochemistry reveals HER2 as ", " while FISH confirms that HER2 amplification is not present."],
+                ["For HER2, immunohistochemistry results are ", " and FISH analysis confirms there is no HER2 amplification."],
+                ["Immunohistochemistry shows HER2 as ", " and fluorescence in situ hybridization (FISH) affirms that HER2 is not amplified."]
+            ],
+            "candidate_set": ["positive", "negative"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "exogenous": false,
+            "variable_name": "HER2 status"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["The tumor exhibits ", " levels of programmed death-ligand 1 (PD-L1) expression. The patient's imaging studies show no distant metastases."],
+                ["Programmed death-ligand 1 (PD-L1) expression in the tumor is ", " with no distant metastases found in the imaging studies."],
+                ["The tumor shows ", " levels of PD-L1 expression, and the imaging studies reveal no distant metastases."],
+                ["Levels of programmed death-ligand 1 (PD-L1) expression in the tumor are ", " and imaging studies confirm there are no distant metastases."],
+                ["The tumor has ", " PD-L1 expression, while imaging studies indicate no distant metastases."],
+                ["Immunohistochemistry shows ", " levels of PD-L1 expression in the tumor, and imaging studies confirm no distant metastases."],
+                ["The level of programmed death-ligand 1 (PD-L1) expression in the tumor is ", " with no evidence of distant metastases in the imaging studies."],
+                ["For programmed death-ligand 1 (PD-L1), the tumor shows ", " levels of expression, and imaging studies show no distant metastases."],
+                ["The tumor's PD-L1 expression is ", " and imaging studies demonstrate the absence of distant metastases."],
+                ["The tumor exhibits ", " expression levels of PD-L1, with imaging studies confirming no distant metastases."]
+            ],
+            "candidate_set": ["low", "high"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+            "exogenous": false,
+            "variable_name": "PD-L1 level"
+        },
+        {
+            "possible_prefix_suffix_pairs": [
+                ["Given these comprehensive findings and the patient's overall health and treatment history, which treatment strategies would be most appropriate for this patient? The best choice is to ", "."],
+                ["Considering the comprehensive findings and the patient's health and treatment history, which treatment strategies are most suitable for this patient? The best option is to ", "."],
+                ["Based on these thorough findings and the patient's general health and past treatments, which treatment strategies should be considered? The optimal choice is to ", "."],
+                ["In light of these detailed findings and taking into account the patient's overall health and treatment history, which treatment approach would be most appropriate? The best action is to ", "."],
+                ["With these comprehensive results and the patient's health and treatment history in mind, what treatment strategies are most fitting? The recommended choice is to ", "."],
+                ["Given the thorough analysis of these findings along with the patient's health and treatment history, what treatment strategies would be ideal? The preferred option is to ", "."],
+                ["Considering the full scope of findings and the patient's overall health and prior treatments, which treatment strategies are best? The most suitable choice is to ", "."],
+                ["Given the extensive findings and the patient's general health and treatment background, which treatment options are most appropriate? The best course of action is to ", "."],
+                ["Taking into account these comprehensive findings and the patient's health and treatment history, which treatment strategies should be chosen? The best approach is to ", "."],
+                ["Based on these complete findings and considering the patient's overall health and treatment background, what are the most appropriate treatment strategies? The ideal choice is to ", "."]
+            ],
+            "candidate_set": ["initiate an aromatase inhibitor therapy", "administer a combination of a PARP inhibitor and chemotherapy", "start a regimen of trastuzumab and pertuzumab", "begin treatment with a checkpoint inhibitor such as pembrolizumab"],
+            "intervention_choice": null,
+            "parent_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            "exogenous": false,
+            "variable_name": "therapy"
+        }
+    ],
+    "index_of_intervention": 12,
+    "intervention_choices": [0, 1],
+    "index_of_outcome": 13,
+    "possible_outcome_choices": [0, 1, 2, 3]
+}
