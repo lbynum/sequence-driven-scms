@@ -1,9 +1,7 @@
 # sequence-driven-scms
-Code for "Language Models as Causal Effect Generators" implementing sequence-driven structural causal models (SD-SCMs).
+Code for "Language Models as Causal Effect Generators" implementing sequence-driven structural causal models (SD-SCMs). An SD-SCM allows for interventional and counterfactual data generation with a user-defined DAG and LLM-defined structural equations.
 
 # causal data generation via language model
-
-An SD-SCM allows for interventional and counterfactual data generation with a user-defined DAG and LLM-defined structural equations.
 
 ![](images/sdscm_example.png)
 
